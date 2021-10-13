@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onresize="ajustaTamanho()">
+    <main>
+        <section  class="painel">
+            <article class="vidas">
+                <img id ="vida1" src="imagens/coracao_cheio.png" alt="coração coracao_cheio">
+                <img id ="vida2" src="imagens/coracao_cheio.png" alt="coração_cheio">
+                <img id ="vida3" src="imagens/coracao_cheio.png" alt="coração_cheio">
+            </article>
+            <article class="cronometro">
+                Tempo restante: <span id="cronometro"></span>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        //ajusta o tempo para 10
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        //carrega uma função automaticamente em um determinado tempo (1s)
+        let criaMosquito = setInterval(function() {
+            posicaoRandomica();
+        }, 2000);
+    </script>
+</body>
+</html>
